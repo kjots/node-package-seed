@@ -1,0 +1,54 @@
+{
+  "name": "node-package-seed",
+  "version": "1.0.0",
+  "description": "Node package seed project",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "gulp clean && gulp test",
+    "prepublish": "gulp clean && gulp compile"
+  },
+  "homepage": "https://github.com/kjots/node-package-seed#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kjots/node-package-seed.git"
+  },
+  "keywords": [
+    "node",
+    "package",
+    "seed"
+  ],
+  "author": "Karl Juri Ots <kjots@kjots.org>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/kjots/node-package-seed/issues"
+  },
+  "engines": {
+    "node": ">=6.9.3",
+    "npm": ">=3.10.10"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.18.0",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-es2016": "^6.16.0",
+    "babel-preset-es2017": "^6.16.0",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "chalk": "^1.1.3",
+    "chokidar": "^1.6.1",
+    "del": "^2.2.2",
+    "eslint": "^3.12.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-eslint": "^3.0.1",
+    "gulp-mocha": "^3.0.1",
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-util": "^3.0.8",
+    "mocha": "^3.2.0",
+    "sinon": "^1.17.7",
+    "sinon-chai": "^2.8.0"
+  },
+  "peerDependencies": {
+    "babel-polyfill": "^6.20.0"
+  }
+}
