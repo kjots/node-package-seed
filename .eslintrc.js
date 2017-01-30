@@ -9,6 +9,7 @@ module.exports = {
         sourceType: 'module'
     },
     rules: {
+        'arrow-spacing': [ 'error', { before: true, after: true } ],
         'brace-style': [ 2, 'stroustrup', { allowSingleLine: true } ],
         'comma-dangle': [ 'error', 'never' ],
         'eqeqeq': [ 'error', 'always' ],
