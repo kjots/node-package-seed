@@ -17,6 +17,7 @@ module.exports = {
         'keyword-spacing': [ 'error', { before: true, after: true } ],
         'linebreak-style': [ 'error', 'unix' ],
         'no-cond-assign': [ 'error', 'always' ],
+        'no-empty': [ 'error', { allowEmptyCatch: true } ],
         'no-unneeded-ternary': [ 'error', { defaultAssignment: false } ],
         'no-var': 'error',
         'quotes': [ 'error', 'single' ],
