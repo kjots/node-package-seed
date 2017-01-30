@@ -10,7 +10,7 @@ module.exports = {
     },
     rules: {
         'arrow-spacing': [ 'error', { before: true, after: true } ],
-        'brace-style': [ 2, 'stroustrup', { allowSingleLine: true } ],
+        'brace-style': [ 'error', 'stroustrup', { allowSingleLine: true } ],
         'comma-dangle': [ 'error', 'never' ],
         'eqeqeq': [ 'error', 'always' ],
         'indent': [ 'error', 4, { SwitchCase: 1 } ],
