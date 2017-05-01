@@ -54,6 +54,7 @@ gulp.task('test:eslint', [], () => {
 gulp.task('test:mocha', [], () => {
     return gulp.src([ 'test/init.spec.js', 'src/**/*.spec.js' ], { read: false })
         .pipe(gulpMocha({
+            compilers: [ 'js:babel-core/register' ],
             require: [ './test/init.js' ]
         }));
 });
