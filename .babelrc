@@ -1,6 +1,5 @@
 {
     "plugins": [
-        "transform-es2015-modules-commonjs",
-        "syntax-trailing-function-commas"
+        "transform-es2015-modules-commonjs"
     ]
 }
