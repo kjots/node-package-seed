@@ -2,7 +2,7 @@
   "name": "@kjots/node-package-seed",
   "version": "1.0.0",
   "description": "Node package seed project",
-  "main": "lib/index.js",
+  "main": "index",
   "scripts": {
     "test": "gulp clean && gulp test",
     "prepare": "gulp clean && gulp compile"
@@ -36,6 +36,7 @@
     "chokidar": "^1.7.0",
     "del": "^3.0.0",
     "eslint": "^4.10.0",
+    "glob": "^7.1.2",
     "gulp": "^3.9.1",
     "gulp-babel": "^7.0.0",
     "gulp-eslint": "^4.0.0",
