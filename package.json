@@ -4,8 +4,8 @@
   "description": "Node package seed project",
   "main": "index",
   "scripts": {
-    "test": "gulp clean && gulp test",
-    "prepare": "gulp clean && gulp compile"
+    "prepare": "gulp clean && gulp compile",
+    "test": "gulp clean && gulp test && cross-env NODE_ENV=test nyc gulp test:mocha"
   },
   "homepage": "https://github.com/kjots/node-package-seed#readme",
   "repository": {
@@ -28,12 +28,14 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-plugin-istanbul": "^4.1.5",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-polyfill": "^6.26.0",
     "chai": "^4.1.2",
     "chai-as-promised": "^7.1.1",
     "chalk": "^2.3.0",
     "chokidar": "^1.7.0",
+    "cross-env": "^5.1.1",
     "del": "^3.0.0",
     "eslint": "^4.10.0",
     "glob": "^7.1.2",
@@ -44,6 +46,7 @@
     "gulp-sourcemaps": "^2.6.1",
     "gulp-util": "^3.0.8",
     "mocha": "^4.0.1",
+    "nyc": "^11.3.0",
     "sinon": "^4.1.1",
     "sinon-chai": "^2.14.0"
   },

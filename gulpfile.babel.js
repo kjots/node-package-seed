@@ -13,7 +13,7 @@ import gulpUtil from 'gulp-util';
 import path from 'path';
 
 const [ srcFilesPattern, specFilesPattern ] = [ '!(*.spec).mjs', '*.spec.mjs' ]
-    .map(pattern => `{,!(node_modules|tmp)/**/}${ pattern }`);
+    .map(pattern => `{,!(node_modules|coverage|tmp)/**/}${ pattern }`);
 
 function compile(pattern, logErrors) {
     function compileError(error) {
@@ -65,11 +65,15 @@ gulp.task('test:mocha', [ 'compile' ], () => {
 
 gulp.task('compile', () => compile(srcFilesPattern));
 
-gulp.task('clean', () => del(
+gulp.task('clean', [ 'clean:compile', 'clean:coverage' ]);
+
+gulp.task('clean:compile', () => del(
     glob.sync(path.resolve(__dirname, srcFilesPattern))
         .map(srcFile => srcFile.replace(/\.mjs$/, '.js'))
         .reduce((libFiles, srcFile) => libFiles.concat(srcFile, srcFile + '.map'), [])
 ));
+
+gulp.task('clean:coverage', () => del([ '.nyc_output', 'coverage' ]));
 
 // eslint-disable-next-line no-unused-vars
 gulp.task('watch', [ 'compile' ], done => {
