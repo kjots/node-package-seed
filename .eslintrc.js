@@ -20,6 +20,7 @@ module.exports = {
         'no-empty': [ 'error', { allowEmptyCatch: true } ],
         'no-unneeded-ternary': [ 'error', { defaultAssignment: false } ],
         'no-var': 'error',
+        'prefer-template': 'error',
         'quotes': [ 'error', 'single' ],
         'semi': [ 'error', 'always' ],
         'space-before-blocks': [ 'error', 'always' ],

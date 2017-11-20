@@ -70,7 +70,7 @@ gulp.task('clean', [ 'clean:compile', 'clean:coverage' ]);
 gulp.task('clean:compile', () => del(
     glob.sync(path.resolve(__dirname, srcFilesPattern))
         .map(srcFile => srcFile.replace(/\.mjs$/, '.js'))
-        .reduce((libFiles, srcFile) => libFiles.concat(srcFile, srcFile + '.map'), [])
+        .reduce((libFiles, srcFile) => libFiles.concat(srcFile, `${ srcFile }.map`), [])
 ));
 
 gulp.task('clean:coverage', () => del([ '.nyc_output', 'coverage' ]));
@@ -83,6 +83,6 @@ gulp.task('watch', [ 'compile' ], done => {
         .on('unlink', srcFile => {
             let libFile = srcFile.replace(/\.mjs$/, '.js');
 
-            del([ libFile, libFile + '.map' ]);
+            del([ libFile, `${ libFile }.map` ]);
         });
 });
